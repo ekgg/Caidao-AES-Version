@@ -1,0 +1,4 @@
+jython-standalone-2.7.0.jar
+
+http://www.jython.org/downloads.html
+Download Jython 2.7.0 - Standalone Jar : For embedding Jython in Java applications
