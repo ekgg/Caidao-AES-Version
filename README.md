@@ -15,6 +15,7 @@ Caidao.exe与服务器的http交互是明文，容易被分析和拦截。
 2. 下载安装Burp Suite Community Edition v1.7.36 https://portswigger.net/burp/communitydownload (其它版本未测试，应该问题不大)
 3. 下载Jython 2.7.0 - Standalone Jar http://www.jython.org/downloads.html
 4. 启动Burp，配置Extender的选项，添加python运行环境
+![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190113135843.png)	
 5. 在Burp Extensions中，添加并启用Caidao Crypto(AES)的python脚本
 	.\Caidao-AES-Version\BurpSuite-Caidao-Extender\CaidaoExt.py
 ![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190113135844.png)	
