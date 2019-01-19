@@ -2,12 +2,13 @@
 用AES算法透明加密菜刀的http数据流
 
 ## 功能介绍
-Caidao.exe与服务器的http交互是明文，容易被分析和拦截。
+Caidao.exe与Web服务器的http交互是明文，容易被分析和拦截。
+![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190119121825.jpg)	
 偶然看到《“冰蝎”动态二进制加密网站管理客户端》https://github.com/rebeyond/Behinder, 这个套路不错哈；
 
 习惯了用菜刀, 于是决定给菜刀做一个Burp的Python AES加密插件，自动加解密caidao.exe与服务器端交互的http数据流，
 进而达到过WAF的目的。
-
+![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190119121836.jpg)	
 
 ## 使用方式
 
@@ -21,9 +22,11 @@ Caidao.exe与服务器的http交互是明文，容易被分析和拦截。
 ![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190113135844.png)	
 6. 在Intenet选项中，设置系统代理为Burp监听的 127.0.0.1:8080
 7. 将修改过的\Caidao-AES-Version\Caidao-AES-PHP\cdaes.php上传到服务器端
-8. 启动caidao.exe，找开服务器端的cdaes.php地址，可在Wireshark中观察是否已经加密了http数据流
+8. 启动caidao.exe，找开服务器端的cdaes.php地址，验证是否成功进入管理界面
+![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190113141856-cd-ok.png)	
+9. 可在Wireshark中观察是否已经加密了http数据流
 ![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190113141221-aes.png)	
-9. 在Burp中，可以查看自动加解密http post的数据流
+10. 在Burp中，可以查看自动加解密http post的数据流
 ![image](https://github.com/ekgg/Caidao-AES-Version/blob/master/Pic/20190113141745-cd2.png)	
 
 ## 注意事项
